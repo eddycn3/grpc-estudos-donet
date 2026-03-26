@@ -1,0 +1,75 @@
+## Build
+bin/
+obj/
+out/
+
+## Logs
+*.log
+
+## Arquivos temporários
+*.tmp
+*.temp
+
+## User-specific files
+*.user
+*.userosscache
+*.suo
+
+## Visual Studio / VS Code
+.vs/
+.vscode/
+
+## Rider
+.idea/
+
+## Arquivos de configuração locais
+appsettings.Development.json
+appsettings.Local.json
+
+## Segredos (User Secrets)
+secrets.json
+
+## NuGet
+*.nupkg
+packages/
+.nuget/
+
+## Publish
+publish/
+*.publishproj
+
+## IIS Express
+.vs/config/applicationhost.config
+
+## Test Results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+## Resharper
+_ReSharper*/
+*.DotSettings.user
+
+## OS Files
+.DS_Store
+Thumbs.db
+
+## Docker
+docker-compose.override.yml
+
+## Azure
+.azure/
+
+## Arquivos de ambiente
+.env
+.env.*
+
+## Entity Framework
+Migrations/*.Designer.cs
+
+## Cache
+*.cache
+
+## Coverage
+coverage/

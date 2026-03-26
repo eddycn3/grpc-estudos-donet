@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ClientConsoleApp/ClientConsoleApp.csproj" />
+  <Project Path="EstudoServiceGrpc/EstudoServiceGrpc.csproj" />
+</Solution>
