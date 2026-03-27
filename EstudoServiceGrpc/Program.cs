@@ -16,3 +16,5 @@ app.MapGrpcService<FirstService>();
 
 
 app.Run();
+
+public partial class Program { }

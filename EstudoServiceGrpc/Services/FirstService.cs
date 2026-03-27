@@ -7,14 +7,14 @@ namespace EstudoServiceGrpc.Services
     {
         public override Task<Response> Unary(Request request, ServerCallContext context)
         {
-            if (!context.RequestHeaders.Where(x => x.Key == "grpc-previous-rpc-attempts").Any())
-            {
-                throw new RpcException(new Status(StatusCode.Internal, "Not here: try again"));
-            }
+            //if (!context.RequestHeaders.Where(x => x.Key == "grpc-previous-rpc-attempts").Any())
+            //{
+            //    throw new RpcException(new Status(StatusCode.Internal, "Not here: try again"));
+            //}
 
             var response = new Response
             {
-                Message = $"Hello {request.Content} from server {context.Host}!"
+                Message = $"Hello {request.Content} from server"
             };
 
             return Task.FromResult(response);

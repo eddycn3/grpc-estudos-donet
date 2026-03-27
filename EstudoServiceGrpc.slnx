@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="ClientConsoleApp/ClientConsoleApp.csproj" />
   <Project Path="EstudoServiceGrpc/EstudoServiceGrpc.csproj" />
+  <Project Path="FristGrpc.Tests.Integration/FristGrpc.Tests.Integration.csproj" Id="ddd59949-b401-4a10-8db4-c1ac3c4188e6" />
   <Project Path="FristGrpc.Tests.Unit/FristGrpc.Tests.Unit.csproj" Id="bbceca69-d059-418b-9c70-8d11fb97bf16" />
 </Solution>
