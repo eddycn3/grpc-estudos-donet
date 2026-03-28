@@ -1,10 +1,12 @@
 ﻿using Basics;
 using Grpc.Core;
+using Microsoft.AspNetCore.Authorization;
 
 namespace EstudoServiceGrpc.Services
 {
     public class FirstService : FirstServiceDefinition.FirstServiceDefinitionBase, IFirstService
     {
+        [Authorize]
         public override Task<Response> Unary(Request request, ServerCallContext context)
         {
             //if (!context.RequestHeaders.Where(x => x.Key == "grpc-previous-rpc-attempts").Any())

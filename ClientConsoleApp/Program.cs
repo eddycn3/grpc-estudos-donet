@@ -1,4 +1,5 @@
-﻿using Basics;
+﻿using Auth;
+using Basics;
 using ClientConsoleApp.Interceptors;
 using Grpc.Core;
 using Grpc.Core.Interceptors;
@@ -45,7 +46,7 @@ var options = new GrpcChannelOptions()
     ServiceConfig = new ServiceConfig()
     {
         MethodConfigs = { retryPolicy}
-    }
+    },
 };
 
 //using var channel = GrpcChannel.ForAddress("https://localhost:7093", options);
@@ -87,7 +88,14 @@ void Unary(FirstServiceDefinition.FirstServiceDefinitionClient client)
 {
     Console.WriteLine("Unary Call");
     var request = new Request() { Content = "Hello you !" };
-    var response = client.Unary(request);
+
+    var token = JwtHelper.GenerateJwtToken("ClientApp");
+
+    //adicionando token no header da requisição
+    var metadata = new Metadata();
+    metadata.Add("Authorization", $"Bearer {token}");
+
+    var response = client.Unary(request, headers: metadata);
 
     // Com Call Dead line
     // Grpc.Core.RpcException: 'Status(StatusCode="DeadlineExceeded", Detail="")'

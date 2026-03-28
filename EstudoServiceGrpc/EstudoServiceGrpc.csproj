@@ -8,10 +8,15 @@
 
 	<ItemGroup>
 		<PackageReference Include="Grpc.AspNetCore" Version="2.64.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.5" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<Folder Include="Protos\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Auth\Auth.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
